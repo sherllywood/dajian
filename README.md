@@ -44,7 +44,7 @@ http://www.hostbuf.com/downloads/finalshell_install.pkg
 ### 申请证书及密钥
 【将代码中注释的邮箱和域名，改为你自己的】
 
-    ~/.acme.sh/acme.sh --register-account -m xxxx@gmail.com
+    ~/.acme.sh/acme.sh --register-account -m 2100742336@qq.com
     
     
 ------------ 
@@ -100,3 +100,8 @@ http://www.hostbuf.com/downloads/finalshell_install.pkg
 如何遇到打不开的情况，可能是端口没有放行，用【方法1】键入停止防火墙代码，或键入开放端口代码。
 
 - 3、V2ray软件：设置——参数设置——V2rayN设置——Core类型改为Xray_Core
+
+
+私钥路径：/root/private.key
+
+公钥路径：/root/cert.crt 

@@ -37,6 +37,19 @@ http://www.hostbuf.com/downloads/finalshell_install.pkg
 
     yum update -y && yum update -y && yum install -y socat
     
+    
+    ### 放行80端口
+
+        iptables -I INPUT -p tcp --dport 80 -j ACCEPT
+        
+### 放行443端口，把80改成443
+        
+        iptables -I INPUT -p tcp --dport 443 -j ACCEPT
+        
+        ### 放行9999端口
+        
+        iptables -I INPUT -p tcp --dport 9999 -j ACCEPT
+    
 ### 运行Acme脚本
 
     curl https://get.acme.sh | sh
@@ -59,6 +72,13 @@ http://www.hostbuf.com/downloads/finalshell_install.pkg
 ### 安装&升级x-ui面板一键脚本
 
     bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
+    ###安装xui
+    admin账号 admin密码 登录
+    访问：域名：9999端口（需放行）
+
+私钥路径：/root/private.key
+
+公钥路径：/root/cert.crt 
 
 ### ##BBR2加速##
 本脚本建议在Debian≥9或是CentOS≥8以上的系统中使用
@@ -76,6 +96,11 @@ http://www.hostbuf.com/downloads/finalshell_install.pkg
 ### 放行443端口，把80改成443
         
         iptables -I INPUT -p tcp --dport 443 -j ACCEPT
+
+
+
+
+
 
 
 查看已开放的端口
@@ -102,6 +127,3 @@ http://www.hostbuf.com/downloads/finalshell_install.pkg
 - 3、V2ray软件：设置——参数设置——V2rayN设置——Core类型改为Xray_Core
 
 
-私钥路径：/root/private.key
-
-公钥路径：/root/cert.crt 

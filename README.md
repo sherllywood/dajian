@@ -181,14 +181,19 @@ ubantu下使用sudo apt install golang-go指令安装go环境，安装过程没�
 原因：未完整安装go环境，使用apt安装的版本可能会比较老。
 解决：
 apt-get install software-properties-common
+
 sudo add-apt-repository ppa:longsleep/golang-backports 
+
 sudo apt-get update 
+
 sudo apt-get install golang-go
+
 测试：
 go version
 
 *************************************************
- 3.      ~/go/bin/xcaddy build --with github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@naive
+ 3.  ~/go/bin/xcaddy build --with github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@naive
+
 
 输入命令：ls 
  
